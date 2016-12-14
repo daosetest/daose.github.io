@@ -24,11 +24,28 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+startings: []
+
+sass:
+  style: compressed
+
 # Build settings
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
