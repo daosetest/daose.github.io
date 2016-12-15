@@ -59,6 +59,31 @@ img {
     }
 }
 
+.first {
+    border: 3px solid $brand-color;
+    color: $brand-color;
+    padding: 10px;
+    font-size: 3em;
+    display: inline;
+    @include media-query($on-palm) {
+        font-size: 2em;
+        display: block;
+    }
+}
+
+.second {
+    border: 3px solid $brand-color;
+    padding: 10px;
+    background-color: $brand-color;
+    color: white;
+    font-size: 3em;
+    display: inline;
+    @include media-query($on-palm) {
+        font-size: 2em;
+        display: block;
+    }
+}
+
 .post-headline {
     font-size: 2em;
         @include media-query($on-palm) {
