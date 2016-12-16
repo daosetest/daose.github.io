@@ -5,6 +5,13 @@ layout: default
 {% for domain in site.domains %}
 <h3>{{domain}}</h3>
 {% endfor %}
-{% for post in site.posts %}
+{% for post in site.posts reversed %}
 <h3><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h3>
 {% endfor %}
+{% if site.github_username %}
+    <ul class="social-media-list">
+        <li>
+            {% include icon-github.html username=site.github_username %}
+        </li>
+    </ul>
+{% endif %}
